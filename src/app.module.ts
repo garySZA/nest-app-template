@@ -4,6 +4,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 
 import { UserModule } from './user';
+import { CommonModule } from './common/common.module';
 
 @Module({
     imports: [
@@ -12,6 +13,7 @@ import { UserModule } from './user';
             rootPath: join(__dirname, '..', 'public'),
         }),
         UserModule,
+        CommonModule,
     ],
     controllers: [],
     providers: [],
